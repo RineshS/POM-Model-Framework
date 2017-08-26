@@ -29,12 +29,12 @@ public class HomePageTestcase extends TestNGAnnotations{
 		return data;
 	}*/
 	
-	@DataProvider(name = "Fetchdata")
+	/*@DataProvider(name = "Fetchdata")
 	public Object[][] getValue(){
 		return new Object[][]{
 			{"DemoSalesManager","crmsfa"},{"user2","pass2"}};
 			
-		}
+		}*/
 	}
 	
 	
