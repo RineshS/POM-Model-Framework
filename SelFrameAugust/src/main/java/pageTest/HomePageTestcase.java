@@ -10,11 +10,11 @@ import pageFactory.HomePage;
 
 public class HomePageTestcase extends TestNGAnnotations{
 
-	@Test
-	public void homePageTestcase(){
+	@Test(dataProvider = "Fetchdata")
+	public void homePageTestcase(String userName,String passWord){
 		new HomePage()
-		.typeUserName()
-		.typeUserPassword()
+		.typeUserName(userName)
+		.typeUserPassword(passWord)
 		.clickLogin();
 
 	}

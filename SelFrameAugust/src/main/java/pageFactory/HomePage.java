@@ -12,15 +12,15 @@ public class HomePage extends AbstractPage {
 	}
 	@FindBy(how = How.ID,using = "username")
 	WebElement uName;
-	public HomePage typeUserName(){
-		type(uName,"DemoSalesManager");
+	public HomePage typeUserName(String userName){
+		type(uName,userName);
 		return this;
 	}
 	
 	@FindBy(how = How.ID,using = "password")
 	WebElement pWord;
-	public HomePage typeUserPassword(){
-		type(pWord,"crmsfa");
+	public HomePage typeUserPassword(String passWord){
+		type(pWord,passWord);
 		return this;
 	}
 	
