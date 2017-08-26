@@ -121,9 +121,11 @@ public class WdMethods extends WdEventListenerCalls {
 	 public boolean verifyTitle(String givenTitle){
 		 String actualTitle = driver.getTitle();
 		 if(actualTitle.equalsIgnoreCase(givenTitle)){
+			 System.out.println("The Title is verified");
 			 return true;
 		 }
 		 else{
+			 System.out.println("The Title is not correct");
 			 return false;
 		 }
 	 }
@@ -142,9 +144,11 @@ public class WdMethods extends WdEventListenerCalls {
     	String expectedVal = ele.getText();
     	boolean finValue;
     	if(value.equalsIgnoreCase(expectedVal)){
+    		System.out.println("The Text is verified");
     		finValue = true;
     	}
     	else{
+    		System.out.println("The Text is not correct");
     		finValue = false;
     	}
     	return finValue;	

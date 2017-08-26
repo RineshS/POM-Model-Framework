@@ -1,5 +1,7 @@
 package base;
 
+import java.io.IOException;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.testng.annotations.AfterGroups;
@@ -12,8 +14,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 
+import dataProvider.ExcelDataProvider;
+
 public class TestNGAnnotations extends WdMethods {
-	
+	public static String excelName;
+	public static String sheetName;
 	@BeforeSuite
 	public void beforeSuite(){
 		System.out.println("Before Suite method");
@@ -30,15 +35,15 @@ public void beforeTest() {
 		System.out.println("Before Groups method");
 	}
 	
-	@BeforeClass
+	/*@BeforeClass
 	public void beforeClass() {
 		System.out.println("Before Class method");
 	}
-	
-	@DataProvider
-	public void dataProvider() {
-		System.out.println("Data Provider method");
-
+	*/
+	@DataProvider(name = "fetchData")
+	public static Object[][] getValue() throws IOException{
+		
+		return ExcelDataProvider.getDataFromExcel(excelName,sheetName);
 	}
 	
 	@BeforeMethod

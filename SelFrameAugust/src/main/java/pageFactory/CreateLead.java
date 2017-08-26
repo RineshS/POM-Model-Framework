@@ -26,22 +26,22 @@ public class CreateLead extends AbstractPage{
 	
 	@FindBy(how=How.ID, using="createLeadForm_companyName")
 	WebElement compName;
-	public CreateLead typeCompName(){
-		type(compName, "Testleaf");
+	public CreateLead typeCompName(String cName){
+		type(compName, cName);
 		return this;
 	}
 	
 	@FindBy(how=How.ID, using="createLeadForm_firstName")
 	WebElement firstName;
-	public CreateLead typeFirstName(){
-		type(firstName, "Asif");
+	public CreateLead typeFirstName(String fName){
+		type(firstName, fName);
 		return this;
 	}
 	
 	@FindBy(how=How.ID, using="createLeadForm_lastName")
 	WebElement lastName;
-	public CreateLead typeLastName(){
-		type(lastName, "Ahmed");
+	public CreateLead typeLastName(String lName){
+		type(lastName, lName);
 		return this;
 	}
 	
@@ -61,15 +61,15 @@ public class CreateLead extends AbstractPage{
 	
 	@FindBy(how=How.ID, using="createLeadForm_primaryPhoneNumber")
 	WebElement phoneNum;
-	public CreateLead typePhoneNumber(){
-		type(phoneNum, "23456787");
+	public CreateLead typePhoneNumber(String pNumber){
+		type(phoneNum, pNumber);
 		return this;
 	}
 	
 	@FindBy(how=How.ID, using="createLeadForm_primaryEmail")
 	WebElement emailID;
-	public CreateLead typeMailId(){
-		type(emailID, "xyz@testleaf.com");
+	public CreateLead typeMailId(String emaidId){
+		type(emailID, emaidId);
 		return this;
 	}
 	
